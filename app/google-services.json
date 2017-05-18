@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "980340804245",
+    "firebase_url": "https://deportesunam-9eada.firebaseio.com",
+    "project_id": "deportesunam-9eada",
+    "storage_bucket": "deportesunam-9eada.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980340804245:android:8baa099f674c79f8",
+        "android_client_info": {
+          "package_name": "com.programacion.robertomtz.deportesunam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980340804245-c5qlgv2bl65s96v9v793000vnnvu68ap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaY_XPmefQjLkCNUY0ExTvUFrQcxUWtfo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

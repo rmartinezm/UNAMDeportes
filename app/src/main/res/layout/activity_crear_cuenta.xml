@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.programacion.robertomtz.deportesunam.CrearCuentaActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/crear_cuenta"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="19dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView5" />
+
+    <Button
+        android:id="@+id/crear_cuenta_btn_crear"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="@string/crear_cuenta"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp" />
+
+    <EditText
+        android:id="@+id/crear_cuenta_et_repite_password"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/repite_password"
+        android:inputType="textPassword"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/crear_cuenta_et_password"
+        android:layout_alignStart="@+id/crear_cuenta_et_password" />
+
+    <EditText
+        android:id="@+id/crear_cuenta_et_password"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:layout_gravity="center_horizontal"
+        android:inputType="textPassword"
+        android:layout_above="@+id/crear_cuenta_et_repite_password"
+        android:layout_alignLeft="@+id/crear_cuenta_et_correo"
+        android:layout_alignStart="@+id/crear_cuenta_et_correo"
+        android:layout_marginBottom="27dp" />
+
+    <EditText
+        android:id="@+id/crear_cuenta_et_correo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:inputType="textEmailAddress"
+        android:hint="@string/correo"
+        android:layout_above="@+id/crear_cuenta_et_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33dp" />
+
+
+</RelativeLayout>
+

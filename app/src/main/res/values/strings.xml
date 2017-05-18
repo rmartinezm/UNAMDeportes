@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">DeportesUNAM</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="crear_cuenta">Crear Cuenta</string>
+    <string name="iniciando_sesion">Iniciando Sesión...</string>
+    <string name="creando_cuenta">Creando Cuenta...</string>
+    <string name="o">o</string>
+    <string name="correo">Correo Electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="repite_password">Repite tu Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="notificaciones">¿Deseas recibir notificaciones?</string>
+
+    <string name="error_iniciar_sesion">Error al inciar sesión</string>
+    <string name="error_crear_cuenta">Error al crear la cuenta</string>
+    <string name="error_password_longitud">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="error_password_no_coinciden">Las contraseñas no coinciden</string>
+    <string name="error_campo_vacio">Ingresar todos los datos requeridos</string>
+
+    <string name="exito_crear_cuenta">Cuenta creada con éxito</string>
+    <string name="exito_iniciar_sesion">Inicio de Sesión éxitoso</string>
+
+    <string name="facebook_app_id">391358924591123</string>
+    <string name="title_activity_principal">PrincipalActivity</string>
+
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="estas_seguro_de_cerrar_sesion">¿Estas seguro de querer cerrar la sesión?</string>
+    <string name="no_cerrar_sesion">No cerrar Sesión</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    
+    <string name="nombre">Nombre</string>
+    <string name="categoria">Categoría</string>
+    <string name="publico">Público</string>
+    <string name="date_unix">DateUnix</string>
+    <string name="lugar">Lugar</string>
+    <string name="descripcion">Descripción</string>
+    <string name="ubicacion">Ubicación</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
