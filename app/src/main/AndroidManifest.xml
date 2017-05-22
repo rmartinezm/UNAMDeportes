@@ -18,7 +18,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".CrearCuentaActivity" />
-        <activity android:name=".LoginActivity" />
         <activity android:name=".InicioActivity" />
 
         <meta-data
@@ -30,6 +29,19 @@
             android:label="@string/title_activity_principal"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".InfoEventoActivity"></activity>
+
+        <service android:name=".MiFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".MiFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>

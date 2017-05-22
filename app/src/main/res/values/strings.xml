@@ -9,7 +9,13 @@
     <string name="password">Contraseña</string>
     <string name="repite_password">Repite tu Contraseña</string>
     <string name="ingresar">Ingresar</string>
-    <string name="notificaciones">¿Deseas recibir notificaciones?</string>
+
+    <string name="notificaciones">Notificaciones</string>
+    <string name="deseas_notificaciones">¿Deseas recibir notificaciones?</string>
+    <string name="si_deseo_notificaciones">Si deseo recibir notificaciones</string>
+    <string name="no_deseo_notificaciones">No deseo recibir notificaciones</string>
+    <string name="ahora_recibiras_notificiaciones">Ahora recibirás notificaciones</string>
+    <string name="no_recibiras_notificiaciones">No recibirás notificaciones</string>
 
     <string name="error_iniciar_sesion">Error al inciar sesión</string>
     <string name="error_crear_cuenta">Error al crear la cuenta</string>

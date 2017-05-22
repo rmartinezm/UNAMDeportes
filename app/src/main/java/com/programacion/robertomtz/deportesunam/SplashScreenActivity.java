@@ -37,33 +37,23 @@ public class SplashScreenActivity extends AppCompatActivity {
         listener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null)
-                    irPrincipalActivity();
-                else{
+                final FirebaseUser user = firebaseAuth.getCurrentUser();
+                ImageView imageView = (ImageView) findViewById(R.id.splash_imagen);
+                Glide.with(SplashScreenActivity.this).load(R.drawable.puma_logo).into(imageView);
 
-                    ImageView imageView = (ImageView) findViewById(R.id.splash_imagen);
-                    Glide.with(SplashScreenActivity.this).load(R.drawable.puma_logo).into(imageView);
-
-                    new Handler().postDelayed(new Runnable() {
+                new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            Intent intent = new Intent(SplashScreenActivity.this, InicioActivity.class);
+                            Intent intent;
+                            intent = (user != null)? new Intent(SplashScreenActivity.this, PrincipalActivity.class) :
+                                    new Intent(SplashScreenActivity.this, InicioActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
                             finish();
                         }
                     }, SPLASH_TIME_OUT);
                 }
-            }
-        };
-
-    }
-
-    private void irPrincipalActivity() {
-        Intent intent = new Intent(this, PrincipalActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+            };
     }
 
     @Override

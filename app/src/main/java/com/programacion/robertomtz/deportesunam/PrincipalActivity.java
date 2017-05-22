@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -20,6 +21,13 @@ import android.widget.Switch;
 
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -30,9 +38,13 @@ public class PrincipalActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private FirebaseAuth firebaseAuth;
+    private FirebaseUser firebaseUser;
+    private DatabaseReference userReference;
+
     private LinkedList<Evento> eventos;
     private ListView lvLista;
     // Auxiliar
+    private View view;
     private String jsonDeportes = jsonDeportes();
 
 
@@ -53,7 +65,12 @@ public class PrincipalActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        view = findViewById(R.id.activity_principal);
+
         firebaseAuth = FirebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
+        userReference = FirebaseDatabase.getInstance().getReference().child("users").child(firebaseUser.getUid());
+
         eventos = new LinkedList<>();
 
         AsyncTaskAuxiliar ata = new AsyncTaskAuxiliar();
@@ -109,14 +126,38 @@ public class PrincipalActivity extends AppCompatActivity
                         })
                         .setNegativeButton(R.string.no_cerrar_sesion, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-
+                                // pass
                             }
                         }).show();
 
 
                 break;
             case R.id.nav_notificaciones:
+                new AlertDialog.Builder(this).setMessage(R.string.deseas_notificaciones)
+                        .setPositiveButton(R.string.si_deseo_notificaciones, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                FirebaseMessaging.getInstance().subscribeToTopic("Notifications");
+
+                                Snackbar snackbar = Snackbar.make(view, R.string.ahora_recibiras_notificiaciones, Snackbar.LENGTH_SHORT);
+                                snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                                snackbar.show();
+                            }
+                        })
+                        .setNegativeButton(R.string.no_deseo_notificaciones, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                FirebaseMessaging.getInstance().unsubscribeFromTopic("Notifications");
+
+                                Snackbar snackbar = Snackbar.make(view, R.string.no_recibiras_notificiaciones, Snackbar.LENGTH_SHORT);
+                                snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                                snackbar.show();
+                            }
+                        }).show();
                 break;
+
             default:
                 return true;
         }

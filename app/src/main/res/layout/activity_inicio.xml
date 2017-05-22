@@ -5,25 +5,12 @@
     android:layout_height="match_parent"
     tools:context="com.programacion.robertomtz.deportesunam.InicioActivity">
 
-    <Button
-        android:id="@+id/inicio_btn_iniciar_sesion"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/iniciar_sesion"
-        android:layout_marginBottom="22dp"
-        android:layout_above="@+id/inicio_btn_crear_cuenta"
-        android:layout_centerHorizontal="true" />
+    <include
+        android:id="@+id/fragment_inicio"
+        layout="@layout/fragment_inicio" />
 
-    <Button
-        android:id="@+id/inicio_btn_crear_cuenta"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/crear_cuenta"
-        android:layout_marginBottom="35dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/inicio_btn_iniciar_sesion"
-        android:layout_alignStart="@+id/inicio_btn_iniciar_sesion" />
+    <include
+        android:id="@+id/fragment_inicio_sesion"
+        layout="@layout/fragment_inicio_sesion" />
 
 </RelativeLayout>
