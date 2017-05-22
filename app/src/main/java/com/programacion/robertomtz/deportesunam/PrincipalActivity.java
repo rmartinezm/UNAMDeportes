@@ -17,16 +17,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Switch;
 
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.json.JSONArray;
@@ -197,7 +193,7 @@ public class PrincipalActivity extends AppCompatActivity
                 "          \"dateUnix\": 1477065600,\n" +
                 "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/_MG_0139.JPG\",\n" +
                 "          \"place\": \"Estadio JOM\",\n" +
-                "          \"description\": \"Intermedia juvenil otoÃ±o\",\n" +
+                "          \"description\": \"Intermedia juvenil otoño\",\n" +
                 "          \"location\": [\n" +
                 "            {\n" +
                 "              \"latitude\": 19.507226,\n" +
@@ -206,8 +202,8 @@ public class PrincipalActivity extends AppCompatActivity
                 "          ]\n" +
                 "        },\n" +
                 "        {\n" +
-                "          \"name\": \"Acondicionamiento fÃ\u00ADsico general\",\n" +
-                "          \"category\": \"Cultura fÃ\u00ADsica\",\n" +
+                "          \"name\": \"Acondicionamiento físico general\",\n" +
+                "          \"category\": \"Cultura física\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476687600,\n" +
                 "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/pista.jpg\",\n" +
@@ -221,12 +217,12 @@ public class PrincipalActivity extends AppCompatActivity
                 "          ]\n" +
                 "        },\n" +
                 "        {\n" +
-                "          \"name\": \"Acondicionamiento fÃ\u00ADsico general\",\n" +
-                "          \"category\": \"Cultura fÃ\u00ADsica\",\n" +
+                "          \"name\": \"Acondicionamiento físico general\",\n" +
+                "          \"category\": \"Cultura física\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476693000,\n" +
                 "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/fronton.jpg\",\n" +
-                "          \"place\": \"Ã\u0081reas verdes del frontÃ³n cerrado\",\n" +
+                "          \"place\": \"Áreas verdes del frontón cerrado\",\n" +
                 "          \"description\": \"Lunes a viernes de 8:30 a 16:30 horas\",\n" +
                 "          \"location\": [\n" +
                 "            {\n" +
@@ -236,12 +232,12 @@ public class PrincipalActivity extends AppCompatActivity
                 "          ]\n" +
                 "        },\n" +
                 "        {\n" +
-                "          \"name\": \"Acondicionamiento fÃ\u00ADsico general\",\n" +
-                "          \"category\": \"Cultura fÃ\u00ADsica\",\n" +
+                "          \"name\": \"Acondicionamiento físico general\",\n" +
+                "          \"category\": \"Cultura física\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476714600,\n" +
                 "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/Atletismo%20de%20la%20UNAM.jpeg\",\n" +
-                "          \"place\": \"JardÃ\u00ADn ubicado junto a la Torre de IngenierÃ\u00ADa\",\n" +
+                "          \"place\": \"Jardín ubicado junto a la Torre de Ingeniería\",\n" +
                 "          \"description\": \"Lunes a viernes de 14:00 a 16:00 horas\",\n" +
                 "          \"location\": [\n" +
                 "            {\n" +
@@ -251,12 +247,12 @@ public class PrincipalActivity extends AppCompatActivity
                 "          ]\n" +
                 "        },\n" +
                 "        {\n" +
-                "          \"name\": \"Acondicionamiento fÃ\u00ADsico general\",\n" +
-                "          \"category\": \"Cultura fÃ\u00ADsica\",\n" +
+                "          \"name\": \"Acondicionamiento físico general\",\n" +
+                "          \"category\": \"Cultura física\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476717300,\n" +
                 "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/harp.jpg\",\n" +
-                "          \"place\": \"Deportivo â€œ C.P. Alfredo Harp HelÃºâ€\u009D\",\n" +
+                "          \"place\": \"Deportivo “ C.P. Alfredo Harp Helú”\",\n" +
                 "          \"description\": \"Lunes a viernes de 15:15 a 16:15 horas\",\n" +
                 "          \"location\": [\n" +
                 "            {\n" +
@@ -266,12 +262,12 @@ public class PrincipalActivity extends AppCompatActivity
                 "          ]\n" +
                 "        },\n" +
                 "        {\n" +
-                "          \"name\": \"Acondicionamiento rÃ\u00ADtmico aerÃ³bico\",\n" +
-                "          \"category\": \"Cultura fÃ\u00ADsica\",\n" +
+                "          \"name\": \"Acondicionamiento rítmico aeróbico\",\n" +
+                "          \"category\": \"Cultura física\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476705600,\n" +
                 "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/Abraham.jpeg\",\n" +
-                "          \"place\": \"Lobby FrontÃ³n Cerrado\",\n" +
+                "          \"place\": \"Lobby Frontón Cerrado\",\n" +
                 "          \"description\": \"Lunes a viernes de 12:00 a 16:00 horas\",\n" +
                 "          \"location\": [\n" +
                 "            {\n" +
@@ -282,11 +278,11 @@ public class PrincipalActivity extends AppCompatActivity
                 "        },\n" +
                 "        {\n" +
                 "          \"name\": \"Deporteca\",\n" +
-                "          \"category\": \"Cultura fÃ\u00ADsica\",\n" +
+                "          \"category\": \"Cultura física\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476705600,\n" +
                 "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/pabellon.jpg\",\n" +
-                "          \"place\": \"Antiguo PabellÃ³n de Rayos CÃ³smicos\",\n" +
+                "          \"place\": \"Antiguo Pabellón de Rayos Cósmicos\",\n" +
                 "          \"description\": \"Lunes a viernes de 12:00 a 18:00 horas\",\n" +
                 "          \"location\": [\n" +
                 "            {\n" +
@@ -296,8 +292,8 @@ public class PrincipalActivity extends AppCompatActivity
                 "          ]\n" +
                 "        },\n" +
                 "        {\n" +
-                "          \"name\": \"Corredor de activaciÃ³n fÃ\u00ADsica\",\n" +
-                "          \"category\": \"Cultura fÃ\u00ADsica\",\n" +
+                "          \"name\": \"Corredor de activación física\",\n" +
+                "          \"category\": \"Cultura física\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476964800,\n" +
                 "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/islas.jpg\",\n" +
@@ -311,13 +307,13 @@ public class PrincipalActivity extends AppCompatActivity
                 "          ]\n" +
                 "        },\n" +
                 "        {\n" +
-                "          \"name\": \"Recorrido en BicitrÃ©n\",\n" +
-                "          \"category\": \"Cultura fÃ\u00ADsica\",\n" +
+                "          \"name\": \"Recorrido en Bicitrén\",\n" +
+                "          \"category\": \"Cultura física\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476707400,\n" +
                 "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/mural.jpg\",\n" +
-                "          \"place\": \"Frente al mural â€œDel Pueblo a la Universidad la Universidad al Puebloâ€\u009D\",\n" +
-                "          \"description\": \"Lado sur torre de RectorÃ\u00ADa.\\n\\nLunes y miÃ©rcoles 12:30 y 13:30 horas\",\n" +
+                "          \"place\": \"Frente al mural “Del Pueblo a la Universidad la Universidad al Pueblo”\",\n" +
+                "          \"description\": \"Lado sur torre de Rectoría.\\n\\nLunes y miércoles 12:30 y 13:30 horas\",\n" +
                 "          \"location\": [\n" +
                 "            {\n" +
                 "              \"latitude\": 19.3321207,\n" +
@@ -326,13 +322,13 @@ public class PrincipalActivity extends AppCompatActivity
                 "          ]\n" +
                 "        },\n" +
                 "        {\n" +
-                "          \"name\": \"ActivaciÃ³n fÃ\u00ADsica funcional\",\n" +
-                "          \"category\": \"Cultura fÃ\u00ADsica\",\n" +
+                "          \"name\": \"Activación física funcional\",\n" +
+                "          \"category\": \"Cultura física\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476702000,\n" +
                 "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/alberca.jpg\",\n" +
-                "          \"place\": \"Centro Puma FIT Lobby alberca OlÃ\u00ADmpica CU\",\n" +
-                "          \"description\": \"Lunes y miÃ©rcoles de 11:00 a 14:00 y 17:00 a 19:00 horas\\n\\nMartes y jueves de 11:00 a 14:00 y 16:00 a 19:00 horas\\n\\nViernes de 11:00 a 14:00 horas\",\n" +
+                "          \"place\": \"Centro Puma FIT Lobby alberca Olímpica CU\",\n" +
+                "          \"description\": \"Lunes y miércoles de 11:00 a 14:00 y 17:00 a 19:00 horas\\n\\nMartes y jueves de 11:00 a 14:00 y 16:00 a 19:00 horas\\n\\nViernes de 11:00 a 14:00 horas\",\n" +
                 "          \"location\": [\n" +
                 "            {\n" +
                 "              \"latitude:\": 19.3302249,\n" +
@@ -341,7 +337,7 @@ public class PrincipalActivity extends AppCompatActivity
                 "          ]\n" +
                 "        },\n" +
                 "        {\n" +
-                "          \"name\": \"Liga CONNDE-FutbÃ³l AsociaciÃ³n Femenil\",\n" +
+                "          \"name\": \"Liga CONNDE-Futból Asociación Femenil\",\n" +
                 "          \"category\": \"Deportes\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476889200,\n" +
@@ -356,7 +352,7 @@ public class PrincipalActivity extends AppCompatActivity
                 "          ]\n" +
                 "        },\n" +
                 "        {\n" +
-                "          \"name\": \"Liga CONNDE-FutbÃ³l AsociaciÃ³n Varonil\",\n" +
+                "          \"name\": \"Liga CONNDE-Futból Asociación Varonil\",\n" +
                 "          \"category\": \"Deportes\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476882000,\n" +
@@ -376,8 +372,8 @@ public class PrincipalActivity extends AppCompatActivity
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476815400,\n" +
                 "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/basket.JPG\",\n" +
-                "          \"place\": \"FrontÃ³n Cerrado, CU.\",\n" +
-                "          \"description\": \"UNAM vs U. AnÃ¡huac Sur\",\n" +
+                "          \"place\": \"Frontón Cerrado, CU.\",\n" +
+                "          \"description\": \"UNAM vs U. Anáhuac Sur\",\n" +
                 "          \"location\": [\n" +
                 "            {\n" +
                 "              \"latitude:\": 19.324884,\n" +
@@ -386,13 +382,13 @@ public class PrincipalActivity extends AppCompatActivity
                 "          ]\n" +
                 "        },\n" +
                 "        {\n" +
-                "          \"name\": \"Vendaje Neuromuscular nivel bÃ¡sico\",\n" +
+                "          \"name\": \"Vendaje Neuromuscular nivel básico\",\n" +
                 "          \"category\": \"Cursos y Talleres\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1477731600,\n" +
                 "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/cecesd.jpg\",\n" +
-                "          \"place\": \"Centro de EducaciÃ³n Continua de Estudios Superiores del Deporte\",\n" +
-                "          \"description\": \"Dirigido a: MÃ©dicos, fisioterapeutas, enfermeras, entrenadores, preparadores fÃ\u00ADsicos y profesionales a fines.\\n\\nTotal de horas: 10 horas.\\n\\nCierre de inscripciÃ³n: 29 de octubre.\",\n" +
+                "          \"place\": \"Centro de Educación Continua de Estudios Superiores del Deporte\",\n" +
+                "          \"description\": \"Dirigido a: Médicos, fisioterapeutas, enfermeras, entrenadores, preparadores físicos y profesionales a fines.\\n\\nTotal de horas: 10 horas.\\n\\nCierre de inscripción: 29 de octubre.\",\n" +
                 "          \"location\": [\n" +
                 "            {\n" +
                 "              \"latitude:\": 19.329936,\n" +
@@ -401,11 +397,11 @@ public class PrincipalActivity extends AppCompatActivity
                 "          ]\n" +
                 "        },\n" +
                 "        {\n" +
-                "          \"name\": \"Beisbol varonil - Ciencias vs ContadurÃ\u00ADa\",\n" +
+                "          \"name\": \"Beisbol varonil - Ciencias vs Contaduría\",\n" +
                 "          \"category\": \"Juegos Universitarios\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476709200,\n" +
-                "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/El%20beisbol%20Puma%20surge%20en%20la%20dÃƒÂ©cada%20de%20los%2030.JPG\",\n" +
+                "          \"image\": \"http://mobile.unam.mx/app2016/deporte/fotos/El%20beisbol%20Puma%20surge%20en%20la%20dÃ©cada%20de%20los%2030.JPG\",\n" +
                 "          \"place\": \"Parque de CU\",\n" +
                 "          \"description\": \"\\\"\\\"\",\n" +
                 "          \"location\": [\n" +
@@ -416,7 +412,7 @@ public class PrincipalActivity extends AppCompatActivity
                 "          ]\n" +
                 "        },\n" +
                 "        {\n" +
-                "          \"name\": \"Beisbol varonil - SelecciÃ³n Juvenil vs EconomÃ\u00ADa\",\n" +
+                "          \"name\": \"Beisbol varonil - Selección Juvenil vs Economía\",\n" +
                 "          \"category\": \"Juegos Universitarios\",\n" +
                 "          \"public\": \"Abierto\",\n" +
                 "          \"dateUnix\": 1476716400,\n" +

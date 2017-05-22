@@ -2,14 +2,13 @@ package com.programacion.robertomtz.deportesunam;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -17,6 +16,7 @@ public class InfoEventoActivity extends AppCompatActivity implements View.OnClic
 
     private TextView nombre, categoria, publico, dateunix, lugar, descripcion;
     private ImageView imagen, ytLogo;
+    private FloatingActionButton fabLocate;
     private Evento evento;
 
     @Override
@@ -35,6 +35,8 @@ public class InfoEventoActivity extends AppCompatActivity implements View.OnClic
         imagen = (ImageView) findViewById(R.id.info_iv_imagen);
         nombre = (TextView) findViewById(R.id.info_nombre);
         ytLogo = (ImageView) findViewById(R.id.info_iv_yt_logo);
+        fabLocate = (FloatingActionButton) findViewById(R.id.fab_locate);
+        fabLocate.setOnClickListener(this);
 
         String cat,pub,dat,lug;
         cat = "Categoría: " + evento.getCategoria();
@@ -69,6 +71,15 @@ public class InfoEventoActivity extends AppCompatActivity implements View.OnClic
                 if (ytLogo.getVisibility() == View.VISIBLE)
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(evento.getVideo())));
 
+                break;
+            case R.id.fab_locate:
+                Intent intent = new Intent(this, MapsActivity.class);
+                double lat, lon;
+                lat = evento.getUbicacion()[0];
+                lon = evento.getUbicacion()[1];
+                intent.putExtra("lat", lat);
+                intent.putExtra("lon", lon);
+                startActivity(intent);
                 break;
         }
     }

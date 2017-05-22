@@ -41,7 +41,7 @@ public class Evento implements Serializable{
             ubicacion = new double[2];
             JSONArray aux = jsonObject.getJSONArray("location");
             ubicacion[0] = aux.getJSONObject(0).getDouble("latitude");
-            ubicacion[1] = aux.getJSONObject(1).getDouble("longitude");
+            ubicacion[1] = aux.getJSONObject(0).getDouble("longitude");
 
         } catch (Exception e) {}
 

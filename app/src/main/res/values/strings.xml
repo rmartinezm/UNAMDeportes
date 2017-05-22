@@ -34,7 +34,7 @@
     <string name="no_cerrar_sesion">No cerrar Sesión</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    
+
     <string name="nombre">Nombre</string>
     <string name="categoria">Categoría</string>
     <string name="publico">Público</string>
@@ -42,6 +42,8 @@
     <string name="lugar">Lugar</string>
     <string name="descripcion">Descripción</string>
     <string name="ubicacion">Ubicación</string>
+
+    <string name="accessTokenMapBox">pk.eyJ1Ijoicm1hcnRpbmV6bSIsImEiOiJjajMwNnRramkwMDlzMnFvaG1iM3RzNjl3In0.FkeWcoWF4u3nHQgF0gP3Kw</string>
 
     <string name="action_settings">Settings</string>
 </resources>
